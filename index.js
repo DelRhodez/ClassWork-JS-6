@@ -62,20 +62,31 @@
 // }
 // console.log(getIdxs(arr, 7).join(", "))
 // или
-let arr = "0,1,2,3,4,5";
-arr = arr.split(",").map(item => Number(item))
+// let arr = "0,1,2,3,4,5";
+// arr = arr.split(",").map(item => Number(item))
 
-function getIdxs(arr, num) {
-    let [i,j] = [0,0];
-    while (i < j) {
-        if (arr[i] + arr[j] < num) {
-            i++
-        } else if (arr[i] + arr[j] > num) {
-            j--
-        } else if (arr[i] + arr[j] === num) {
-            return [i,j]
-        }
-    }
-    return []
+// function getIdxs(arr, num) {
+//     let [i,j] = [0,0];
+//     while (i < j) {
+//         if (arr[i] + arr[j] < num) {
+//             i++
+//         } else if (arr[i] + arr[j] > num) {
+//             j--
+//         } else if (arr[i] + arr[j] === num) {
+//             return [i,j]
+//         }
+//     }
+//     return []
+// }
+// console.log(getIdxs(arr, 7).join(", "))
+
+// Задание 4
+let arr = [2, 5, -7, 4, 0]
+function maxOfArray(arr) {
+    return arr.reduce((max, item) => {
+        return (item > max) ? item : max;
+    })
 }
-console.log(getIdxs(arr, 7).join(", "))
+console.log(
+    maxOfArray(arr)
+)
